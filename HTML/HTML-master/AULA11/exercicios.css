@@ -1,0 +1,82 @@
+/* EXERCÍCIO 01 */
+
+.menu {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 43px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* EXERCÍCIO 02 */
+
+.menu2 {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 43px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* EXERCÍCIO 03 */
+
+.menu3 {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 43px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* EXERCÍCIO 04 */
+
+.menu4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 43px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* EXERCÍCIO 05 */
+
+.menu5 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 43px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+@media (max-width: 768px) {
+    .menu5 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    .menu5 {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* EXERCÍCIO 06 */
+
+.menu6 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 43px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}

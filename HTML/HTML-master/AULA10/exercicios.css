@@ -1,0 +1,32 @@
+.equipe {
+    display: flex;
+    gap: 80px;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 30PX;
+}
+
+.equipe {
+    flex: 1;
+    min-width: 220px;
+}
+
+.equipe2 {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.equipe2 {
+    flex: 1;
+    min-width: 220px;
+}
+
+.equipe3 {
+    display: flex;
+    gap: 3px;
+    justify-content: flex-start;
+}

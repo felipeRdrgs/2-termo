@@ -1,0 +1,101 @@
+header {
+    display: flex;
+}
+
+.intro {
+    display: flex;
+}
+
+.cursos {
+    display: flex;
+}
+
+.menu {
+    display: flex;
+    gap: 40px;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    
+
+}
+
+.menu :hover {
+    background-color: rgb(214, 209, 211);
+}
+
+section {
+    display: flex;
+    
+
+}
+
+.texto {
+    align-items: stretch;
+}
+
+.lista-cartão {
+    display: flex;
+    flex: wrap;
+    padding: 0px 8%;
+}
+
+section ul, li {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+li {
+    display: flex;
+    flex: 1;
+    padding: 0%;
+}
+
+.intro :hover {
+    background-color: rgb(214, 209, 211);
+}
+
+.exemplo-b {
+    display: flex;
+    align-items: center;
+    gap: 40;
+}
+
+.exemplo-b-c,
+.exemplo-b-i {
+    flex: 1;
+}
+
+.exemplo-i {
+    margin: 0;
+}
+
+.exemplo-b-i img {
+    width: 100%;
+    display: block;
+}
+
+.card-e {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+}
+
+.card-e > li {
+    flex: 1;
+    min-width: 220px;
+}
+
+.contato {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    padding: 15% 8%;
+}
+
+.contato-c, .contato form {
+    flex: 1;
+}

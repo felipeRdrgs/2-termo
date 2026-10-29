@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SmartCoffee</title>
+
+    <style>
+
+        /* =========================
+           CONFIGURAÇÕES GERAIS
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f5f3ef;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #3b2b20;
+        }
+
+        .pagina {
+            width: 82%;
+            max-width: 1100px;
+            margin: 30px auto;
+            background-color: #fffaf0;
+        }
+
+
+        /* =========================
+           CABEÇALHO
+        ========================= */
+
+        header {
+            height: 55px;
+            background-color: #fff0e2;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 0 20px;
+
+            border-bottom: 1px solid #e47a32;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+
+            font-family: Georgia, serif;
+            font-size: 18px;
+        }
+
+        .logo img {
+            width: 25px;
+            height: 25px;
+            object-fit: contain;
+        }
+
+        .logo span {
+            color: #f36c21;
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        nav a {
+            color: #4b3524;
+            text-decoration: none;
+            font-size: 11px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #f36c21;
+        }
+
+        .menu {
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+
+        /* =========================
+           PRIMEIRA SEÇÃO
+        ========================= */
+
+        .hero {
+            margin: 0 15px;
+            height: 245px;
+
+            background-image: url("img/cafe-fundo.jpg");
+            background-size: cover;
+            background-position: center;
+
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-conteudo {
+            width: 75%;
+            margin-left: 30px;
+
+            display: flex;
+
+            height: 165px;
+        }
+
+        .hero-texto {
+            width: 50%;
+
+            background-color: #fffaf0;
+
+            padding: 20px;
+        }
+
+        .hero-texto h1 {
+            font-size: 22px;
+            font-weight: normal;
+
+            line-height: 1.1;
+
+            margin-bottom: 8px;
+        }
+
+        .hero-texto p {
+            font-family: Georgia, serif;
+            font-size: 9px;
+
+            margin-bottom: 12px;
+        }
+
+        .botao {
+            background-color: #ff6b22;
+            color: white;
+
+            border: none;
+
+            padding: 7px 12px;
+
+            font-size: 8px;
+
+            cursor: pointer;
+        }
+
+        .botao:hover {
+            background-color: #db5317;
+        }
+
+        .hero-imagem {
+            width: 50%;
+
+            background-image: url("img/cafe-fundo.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+
+        /* =========================
+           SOBRE NÓS
+        ========================= */
+
+        .sobre {
+            padding: 25px 30px;
+
+            display: flex;
+            align-items: center;
+
+            gap: 30px;
+
+            border-top: 1px solid #e47a32;
+        }
+
+        .sobre-texto {
+            width: 38%;
+        }
+
+        .sobre-texto h2 {
+            font-family: Georgia, serif;
+
+            font-size: 20px;
+            font-weight: normal;
+
+            color: #493426;
+
+            margin-bottom: 5px;
+        }
+
+        .sobre-texto p {
+            font-family: Georgia, serif;
+
+            font-size: 9px;
+
+            line-height: 1.35;
+
+            margin-bottom: 10px;
+        }
+
+        .sobre-imagem {
+            width: 62%;
+            height: 160px;
+
+            background-image: url("img/sobre.jpg");
+
+            background-size: cover;
+            background-position: center;
+        }
+
+
+        /* =========================
+           BANNER DE CAFÉ
+        ========================= */
+
+        .banner {
+            width: 100%;
+        }
+
+        .banner img {
+            width: 100%;
+            height: 180px;
+
+            object-fit: cover;
+
+            display: block;
+        }
+
+
+        /* =========================
+           PEDIDOS
+        ========================= */
+
+        .pedido {
+            height: 70px;
+
+            display: flex;
+            flex-direction: column;
+
+            align-items: center;
+            justify-content: center;
+
+            gap: 12px;
+        }
+
+
+        /* TOGGLE */
+
+        .toggle {
+            width: 28px;
+            height: 12px;
+
+            background-color: #f5f1e8;
+
+            border: 1px solid #ddd;
+
+            border-radius: 10px;
+
+            position: relative;
+        }
+
+        .toggle::before {
+            content: "";
+
+            width: 10px;
+            height: 10px;
+
+            background-color: #222;
+
+            border-radius: 50%;
+
+            position: absolute;
+
+            left: 0;
+            top: 0;
+        }
+
+
+        /* BOTÕES */
+
+        .botoes {
+            display: flex;
+
+            gap: 90px;
+        }
+
+        .botoes button {
+            width: 80px;
+            height: 22px;
+
+            border: none;
+
+            background-color: #80572f;
+            color: white;
+
+            font-size: 8px;
+
+            cursor: pointer;
+        }
+
+        .botoes button:hover {
+            background-color: #ff6b22;
+        }
+
+
+        /* =========================
+           RODAPÉ
+        ========================= */
+
+        footer {
+            height: 65px;
+
+            background-color: #80572f;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 0 20px;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+
+            gap: 5px;
+
+            color: white;
+
+            font-family: Georgia, serif;
+
+            font-size: 16px;
+        }
+
+        .footer-logo img {
+            width: 25px;
+            height: 25px;
+
+            object-fit: contain;
+        }
+
+        .footer-logo span {
+            color: #ff7525;
+
+            font-style: italic;
+        }
+
+
+        /* CÍRCULOS */
+
+        .redes {
+            display: flex;
+
+            gap: 12px;
+        }
+
+        .rede {
+            width: 14px;
+            height: 14px;
+
+            background-color: #ff7525;
+
+            border-radius: 50%;
+        }
+
+
+        /* =========================
+           RESPONSIVIDADE
+        ========================= */
+
+        @media (max-width: 700px) {
+
+            .pagina {
+                width: 100%;
+                margin: 0;
+            }
+
+            header {
+                padding: 0 10px;
+            }
+
+            nav {
+                gap: 8px;
+            }
+
+            nav a {
+                font-size: 9px;
+            }
+
+            .hero {
+                margin: 0;
+            }
+
+            .hero-conteudo {
+                width: 90%;
+                margin-left: 15px;
+            }
+
+            .sobre {
+                flex-direction: column;
+            }
+
+            .sobre-texto,
+            .sobre-imagem {
+                width: 100%;
+            }
+
+            .botoes {
+                gap: 40px;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+    <div class="pagina">
+
+
+        <!-- =========================
+             CABEÇALHO
+        ========================== -->
+
+        <header>
+
+            <div class="logo">
+
+                <img src="img/logo.png" alt="Logo SmartCoffee">
+
+                <div>
+                    smart<span>coffee.</span>
+                </div>
+
+            </div>
+
+
+            <nav>
+
+                <a href="#">⌂ Início</a>
+
+                <a href="#">▣ Sacola</a>
+
+                <a href="#">▤ Cardápio</a>
+
+                <div class="menu">
+                    ☰
+                </div>
+
+            </nav>
+
+        </header>
+
+
+        <!-- =========================
+             PRIMEIRA SEÇÃO
+        ========================== -->
+
+        <section class="hero">
+
+            <div class="hero-conteudo">
+
+                <div class="hero-texto">
+
+                    <h1>
+                        Café que<br>
+                        conecta as pessoas
+                    </h1>
+
+                    <p>
+                        mais que café, uma experiência
+                    </p>
+
+                    <button class="botao">
+                        Conheça - nós
+                    </button>
+
+                </div>
+
+
+                <div class="hero-imagem"></div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             SOBRE NÓS
+        ========================== -->
+
+        <section class="sobre">
+
+            <div class="sobre-texto">
+
+                <h2>
+                    sobre nós
+                </h2>
+
+                <p>
+                    Na SmartCoffee, cada xícara tem um toque
+                    especial. Seja espresso tradicional, um
+                    cappuccino cremoso ou uma bebida gelada
+                    para os dias quentes, a ideia é transformar
+                    uma simples pausa em um momento agradável.
+                </p>
+
+                <button class="botao">
+                    saiba mais
+                </button>
+
+            </div>
+
+
+            <div class="sobre-imagem"></div>
+
+        </section>
+
+
+        <!-- =========================
+             BANNER
+        ========================== -->
+
+        <section class="banner">
+
+            <img
+                src="img/cafe-banner.jpg"
+                alt="Café da SmartCoffee"
+            >
+
+        </section>
+
+
+        <!-- =========================
+             PEDIDOS
+        ========================== -->
+
+        <section class="pedido">
+
+            <div class="toggle"></div>
+
+
+            <div class="botoes">
+
+                <button>
+                    Clique & retire
+                </button>
+
+                <button>
+                    delivery
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             RODAPÉ
+        ========================== -->
+
+        <footer>
+
+            <div class="footer-logo">
+
+                <img
+                    src="img/logo.png"
+                    alt="Logo SmartCoffee"
+                >
+
+                <div>
+                    smart<span>coffee.</span>
+                </div>
+
+            </div>
+
+
+            <div class="redes">
+
+                <div class="rede"></div>
+
+                <div class="rede"></div>
+
+                <div class="rede"></div>
+
+                <div class="rede"></div>
+
+            </div>
+
+        </footer>
+
+    </div>
+
+</body>
+
+</html>
